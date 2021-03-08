@@ -30,3 +30,20 @@ class Search extends Component {
             })
             .catch(err => console.log(err))
     };
+    render() {
+        return (
+            <div>
+                <Container>
+                    <Row>
+                        <Col size="md-12">
+                            <form>
+                                <Container>
+                                    <Row>
+                                        <Col size="xs-12 sm-12">
+                                            <Input
+                                                name="bookSearch"
+                                                value={this.state.bookSearch}
+                                                onChange={this.handleInputChange}
+                                                placeholder="Search for a Book"
+                                            />
+                                        </Col>
