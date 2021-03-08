@@ -47,3 +47,19 @@ class Search extends Component {
                                                 placeholder="Search for a Book"
                                             />
                                         </Col>
+                                        </Row>
+                                    <Row>
+                                        <Col size="xs-12 sm-12">
+                                            <SearchButton
+                                                onClick={this.handleFormSubmit}
+                                                type="success"
+                                                className="input-lg"
+                                            >
+                                                Search
+                                            </SearchButton>
+                                        </Col>
+                                    </Row>
+                                </Container>
+                            </form>
+                        </Col>
+                    </Row>
