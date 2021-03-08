@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-
+import "./index.css";
 function App() {
   return (
     <div className="App">
@@ -15,6 +15,5 @@ function App() {
     </div>
   );
 }
-
 
 export default App;
