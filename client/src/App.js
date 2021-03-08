@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Nav from "./components/NavBar";
+import Nav from "./components/NavBar/navbar";
 import Searchbar from "./pages/searchbar";
 import Save from "./pages/savedbooks";
-import Header from "./components/Header";
+import Header from "./components/Header/header";
 import "./index.css";
 
 class App extends Component {

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import API from "../utils/api";
-import { Container, Row, Col } from "../components/GridLayout";
-import { BookList, BookListItem } from "../components/Booklist";
+import { Container, Row, Col } from "../components/GridLayout/grid";
+import { BookList, BookListItem } from "../components/Book/booklist";
 
 class Save extends Component {
   // instantiate state for saved books

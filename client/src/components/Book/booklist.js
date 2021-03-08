@@ -1,8 +1,9 @@
 import React from "react";
-import { Container, Row, Col } from "../GridLayout";
+import { Container, Row, Col } from "../GridLayout/grid";
 import API from "../../utils/api";
-import "./style.css";
+
 import SaveBtn from "../Save";
+import DeleteBtn from "../Deletebtn";
 
 export function BookList({ children }) {
   return <ul className="list-group">{children}</ul>;
@@ -24,9 +25,6 @@ export function BookListItem(props) {
     <li className="list-group-item" key={props.id}>
       <Container>
         <Row>
-          <Col size="xs-4 sm-2">
-            <Thumbnail src={props.image} />
-          </Col>
           <Col size="xs-8 sm-10">
             <h3>{props.title}</h3>
             <p>Written By {[props.authors].flat().join(", ")}</p>
@@ -49,11 +47,7 @@ export function BookListItem(props) {
                 Save
               </SaveBtn>
             ) : (
-              <DeleteBtn
-                type="danger"
-                className="input-lg"
-                onClick={handleDeleteBtn}
-              >
+              <DeleteBtn type="danger" className="input-lg">
                 Delete
               </DeleteBtn>
             )}

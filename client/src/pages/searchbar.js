@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import API from "../utils/api";
-import { Container, Row, Col } from "../components/GridLayout";
-import { BookList, BookListItem } from "../components/BookList";
+import { Container, Row, Col } from "../components/GridLayout/grid";
+import { BookList, BookListItem } from "../components/Book/booklist";
 import { Input, SearchButton } from "../components/InputBooks";
 
 class Search extends Component {
