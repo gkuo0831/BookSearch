@@ -1,2 +1,32 @@
 import React, { Component } from "react";
 import API from "../utils/api";
+import { Container, Row, Col } from "../components/GridLayout";
+import { BookList, BookListItem } from "../components/BookList";
+import { Input, SearchButton } from "../components/InputBooks";
+
+class Search extends Component {
+
+    // instatiate state for list of books retrieved from googlebooks api and bookSearch value
+    state = {
+        books: [],
+        bookSearch: ""
+    };
+
+    handleInputChange = event => {
+        const { name, value } = event.target;
+        this.setState({ [name]: value })
+    };
+
+    handleFormSubmit = event => {
+        
+        event.preventDefault();
+
+        
+        API.searchBooks(this.state.bookSearch)
+            .then(res => {
+                this.setState({ books: res.data.items }, function () {
+                    console.log(this.state.books);
+                })
+            })
+            .catch(err => console.log(err))
+    };
