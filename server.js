@@ -13,13 +13,14 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost/limitless-retreat-68581',
+  process.env.MONGODB_URI || "mongodb://localhost/limitless-retreat-68581",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
-    useFindAndModify: false
+    useFindAndModify: false,
   }
+);
 
 app.use("/api", apiRoutes);
 
